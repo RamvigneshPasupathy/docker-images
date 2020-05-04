@@ -1,5 +1,6 @@
 # image name: datascience-cpu
 # inspired from https://github.com/hamelsmu/Docker_Tutorial/blob/master/basic_tutorial/Dockerfile
+# curl https://raw.githubusercontent.com/hamelsmu/Docker_Tutorial/master/basic_tutorial/Dockerfile > Dockerfile
 
 # basic cpu image
 ## os flavor: centos
@@ -9,6 +10,7 @@
 FROM centos:latest
 
 RUN yum -y update
+
 RUN yum -y install wget git bzip2 python3
 
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh
